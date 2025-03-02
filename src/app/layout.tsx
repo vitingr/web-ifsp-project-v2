@@ -1,21 +1,19 @@
-import ToastMessage from "@/components/toolkit/ToastMessage";
-import { APP_FONT } from "@/constants/font";
+import ToastMessage from '@/components/toolkit/ToastMessage'
+import { APP_FONT } from '@/constants/font'
 
 import '@/styles/index.scss'
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="pt">
-      <body
-        className={`${APP_FONT.className}`}
-      >
+      <body className={`${APP_FONT.className}`}>
         <ToastMessage />
         {children}
       </body>
     </html>
-  );
+  )
 }

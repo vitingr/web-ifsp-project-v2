@@ -58,7 +58,7 @@ export const Modal: React.FC<ModalProps> = ({
                   <div className="absolute right-3 top-3">
                     <button
                       aria-label="close-modal"
-                      className="w-8 rounded-sm p-1 text-slate-600 duration-default hover:bg-slate-200 hover:text-slate-500"
+                      className="duration-default w-8 rounded-sm p-1 text-slate-600 hover:bg-slate-200 hover:text-slate-500"
                       onClick={handleCloseModal}
                     >
                       <HiXMark size={24} />

@@ -36,4 +36,3 @@ jobs:
         run: |
           echo "Your Pull Request has been authorized successfully! 🥳"
 
-

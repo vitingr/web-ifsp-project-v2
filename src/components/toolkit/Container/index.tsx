@@ -13,7 +13,7 @@ export const Container: React.FC<ContainerProps> = ({
   ...props
 }) => {
   return createElement(
-    as,
+    as as keyof JSX.IntrinsicElements,
     {
       className: `scroll-mt-[100px] ${disableSidePadding ? '' : 'px-4'} ${wrapperClassName}`,
       'data-cid': dataCid,

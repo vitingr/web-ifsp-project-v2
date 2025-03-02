@@ -21,7 +21,7 @@ jobs:
 
       - name: Install PNPM
         run: |
-          npm install -g pnpm@latest
+          npm install -g pnpm@9.15.1
 
       - name: Install dependencies
         run: |

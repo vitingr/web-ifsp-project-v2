@@ -1,4 +1,4 @@
-FROM node:20.9.0 AS builder
+FROM node:22.13.0 AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget curl gnupg ca-certificates \

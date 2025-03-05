@@ -60,19 +60,19 @@ jobs:
         run: terraform fmt -check
         continue-on-error: true
 
-    - name: Terraform Init
-      id: init
-      env:
-        TF_VAR_region: ${{ secrets.AWS_REGION }}
-        TF_VAR_aws_bucket_name: ${{ secrets.AWS_BUCKET_NAME }}
-        TF_VAR_aws_bucket_key: ${{ secrets.AWS_BUCKET_KEY_NAME }}
-        TF_VAR_project_name: ${{ secrets.PROJECT_NAME }}
-      run: |
-        cd infra/tf
-        terraform init -reconfigure \
-          -backend-config="bucket=${{ secrets.AWS_BUCKET_NAME }}" \
-          -backend-config="key=${{ secrets.AWS_BUCKET_KEY_NAME }}" \
-          -backend-config="region=${{ secrets.AWS_REGION }}"
+      - name: Terraform Init
+        id: init
+        env:
+          TF_VAR_region: ${{ secrets.AWS_REGION }}
+          TF_VAR_aws_bucket_name: ${{ secrets.AWS_BUCKET_NAME }}
+          TF_VAR_aws_bucket_key: ${{ secrets.AWS_BUCKET_KEY_NAME }}
+          TF_VAR_project_name: ${{ secrets.PROJECT_NAME }}
+        run: |
+          cd infra/tf
+          terraform init -reconfigure \
+            -backend-config="bucket=${{ secrets.AWS_BUCKET_NAME }}" \
+            -backend-config="key=${{ secrets.AWS_BUCKET_KEY_NAME }}" \
+            -backend-config="region=${{ secrets.AWS_REGION }}"
 
       - name: Terraform Validate
         id: validate

@@ -36,22 +36,11 @@ jobs:
         run: |
           npm install -g pnpm@9.15.1
 
-      - name: test
-        run: |
-          echo ${{ secrets.AWS_ROLE }}
-
-      - name: test
-        run: |
-          echo ${{ secrets.AWS_ACCESS_KEY_ID }}
-
-      - name: test
-        run: |
-          echo ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-arn: ${{ secrets.AWS_ROLE }}
+          certificate-arn: ${{ secrets.AWS_ROLE }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.REGION }}

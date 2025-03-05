@@ -1,17 +1,3 @@
-data "aws_ami" "ubuntu" {
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/*20.04-amd64-server-*"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-}
-
 terraform {
   required_version = ">=1.0.0"
   backend "s3" {
@@ -24,7 +10,7 @@ terraform {
       role_arn = var.role_arn
     }
   }
-  
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -33,10 +19,31 @@ terraform {
   }
 }
 
+resource "aws_security_group" "securitygroup" {
+  name        = "securitygroup"
+  description = "Allow HTTP and Internet Access"
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 65535
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 resource "aws_instance" "server" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = "ami-05b10e08d247fb927"
   instance_type = "t2.micro"
   key_name      = "app-ssh-key"
+
+  vpc_security_group_ids = [aws_security_group.securitygroup.id]
 
   tags = {
     Environment = var.env

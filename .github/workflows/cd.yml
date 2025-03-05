@@ -30,7 +30,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.AWS_S3_ROLE }}
+          # role-to-assume: ${{ secrets.AWS_S3_ROLE }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.REGION }}
@@ -59,9 +59,9 @@ jobs:
           TF_VAR_aws_bucket_name: ${{ env.PROJECT_NAME }}-${{ env.ENVIRONMENT }}
           TF_VAR_aws_bucket_key: ${{ github.sha }}
           TF_VAR_project_name: ${{ env.PROJECT_NAME }}
-          AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
-          AWS_BUCKET_KEY_NAME: ${{ secrets.AWS_BUCKET_KEY_NAME }}
-        run: terraform init -backend-config="bucket=${AWS_BUCKET_NAME}" -backend-config="key=${AWS_BUCKET_KEY_NAME}" -backend-config="region=${AWS_REGION}"
+          # AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+          # AWS_BUCKET_KEY_NAME: ${{ secrets.AWS_BUCKET_KEY_NAME }}
+        run: terraform init"
 
       - name: Terraform Validate
         id: validate

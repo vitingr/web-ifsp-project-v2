@@ -12,6 +12,9 @@ on:
 env:
   PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
 
+permissions:
+  id-token: write
+
 jobs:
   build-deploy:
     name: 'Build and Deploy'
@@ -35,8 +38,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: ${{ secrets.AWS_ROLE }}
           aws-region: ${{ secrets.REGION }}
           role-session-name: GitHub-Session
           role-duration-seconds: 1200

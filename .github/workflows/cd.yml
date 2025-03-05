@@ -77,8 +77,10 @@ jobs:
         id: plan
         run: |
           cd infra/tf
-          terraform plan -no-color
-        continue-on-error: true
+          terraform plan -no-color \
+            -var "aws_bucket_name=${{ secrets.AWS_BUCKET_NAME }}" \
+            -var "aws_bucket_key=${{ secrets.AWS_BUCKET_KEY_NAME }}" \
+            -var "region=${{ secrets.REGION }}"
 
       - name: Terraform Apply
         run: |

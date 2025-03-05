@@ -74,15 +74,12 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -no-color
-        if: github.event_name == 'pull_request'
         continue-on-error: true
 
       - name: Terraform Plan Status
-        if: steps.plan.outcome == 'failure'
         run: exit 1
 
       - name: Terraform Apply
-        if: success() && steps.plan.outcome == 'success'
         run: |
           cd infra/tf
           terraform apply -auto-approve

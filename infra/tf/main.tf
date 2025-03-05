@@ -24,6 +24,7 @@ terraform {
       role_arn = var.role_arn
     }
   }
+  
   required_providers {
     aws = {
       source  = "hashicorp/aws"

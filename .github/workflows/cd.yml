@@ -67,7 +67,9 @@ jobs:
           TF_VAR_aws_bucket_name: ${{ env.PROJECT_NAME }}-${{ env.ENVIRONMENT }}
           TF_VAR_aws_bucket_key: ${{ github.sha }}
           TF_VAR_project_name: ${{ env.PROJECT_NAME }}
-        run: terraform init
+        run: |
+          cd infra/tf
+          terraform init -reconfigure
 
       - name: Terraform Validate
         id: validate

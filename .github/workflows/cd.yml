@@ -64,8 +64,8 @@ jobs:
         id: init
         env:
           TF_VAR_region: ${{ env.REGION }}
-          TF_VAR_aws_bucket_name: ${{ env.PROJECT_NAME }}-${{ env.ENVIRONMENT }}
-          TF_VAR_aws_bucket_key: ${{ github.sha }}
+          TF_VAR_aws_bucket_name: ${{ env.AWS_BUCKET_NAME }}
+          TF_VAR_aws_bucket_key: ${{ github.AWS_BUCKET_KEY_NAME }}
           TF_VAR_project_name: ${{ env.PROJECT_NAME }}
         run: |
           cd infra/tf

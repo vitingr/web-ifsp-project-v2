@@ -1,4 +1,3 @@
-# arn:aws:iam::412898606600:role/web-ifsp-terraform-aws-tfstates-role
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -16,6 +15,9 @@ data "aws_ami" "ubuntu" {
 terraform {
   required_version = ">=1.0.0"
   backend "s3" {
+    bucket  = var.aws_bucket_name
+    key     = var.aws_bucket_key
+    region  = var.region
     encrypt = true
   }
   required_providers {

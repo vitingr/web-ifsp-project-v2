@@ -19,6 +19,10 @@ terraform {
     key     = var.aws_bucket_key
     region  = var.region
     encrypt = true
+
+    assume_role {
+      role_arn = var.role_arn
+    }
   }
   required_providers {
     aws = {

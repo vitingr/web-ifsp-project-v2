@@ -3,7 +3,11 @@ variable "aws_bucket_key" {}
 variable "project_name" {}
 variable "region" {}
 variable "env" {}
-variable "certificate_arn" {}
+
+variable "role_arn" {
+  description = "The ARN of the role to assume"
+  type        = string
+}
 
 variable "ec2_name" {
   type        = string

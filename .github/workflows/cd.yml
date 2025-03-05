@@ -1,0 +1,79 @@
+name: 'Project Build and Deploy'
+
+on:
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - infra/tf/**
+      - '.github/workflows/infra_**'
+    branches:
+      - master
+
+env:
+  PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+
+jobs:
+  build-deploy:
+    name: 'Build and Deploy'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.9.0
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_S3_ROLE }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.REGION }}
+
+      - name: Build
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.11.0
+
+      - name: Terraform fmt
+        id: fmt
+        run: terraform fmt -check
+        continue-on-error: true
+
+      - name: Terraform Init
+        id: init
+        env:
+          TF_VAR_region: ${{ env.REGION }}
+          TF_VAR_aws_bucket_name: ${{ env.PROJECT_NAME }}-${{ env.ENVIRONMENT }}
+          TF_VAR_aws_bucket_key: ${{ github.sha }}
+          TF_VAR_project_name: ${{ env.PROJECT_NAME }}
+          AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+          AWS_BUCKET_KEY_NAME: ${{ secrets.AWS_BUCKET_KEY_NAME }}
+        run: terraform init -backend-config="bucket=${AWS_BUCKET_NAME}" -backend-config="key=${AWS_BUCKET_KEY_NAME}" -backend-config="region=${AWS_REGION}"
+
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
+
+      - name: Terraform Plan
+        id: plan
+        run: terraform plan -no-color
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+
+      - name: Terraform Plan Status
+        if: steps.plan.outcome == 'failure'
+        run: exit 1
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve

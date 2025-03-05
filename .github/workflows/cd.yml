@@ -35,6 +35,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.REGION }}
           role-session-name: GitHub-OIDC-TERRAFORM
+          role-skip-session-tagging: true
 
       - name: Build
         run: |

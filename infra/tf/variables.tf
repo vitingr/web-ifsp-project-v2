@@ -4,11 +4,6 @@ variable "project_name" {}
 variable "region" {}
 variable "env" {}
 
-variable "role_arn" {
-  description = "The ARN of the role to assume"
-  type        = string
-}
-
 variable "ec2_name" {
   type        = string
   description = "EC2 Machine Name"

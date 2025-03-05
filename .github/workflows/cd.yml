@@ -80,7 +80,10 @@ jobs:
           terraform plan -no-color \
             -var "aws_bucket_name=${{ secrets.AWS_BUCKET_NAME }}" \
             -var "aws_bucket_key=${{ secrets.AWS_BUCKET_KEY_NAME }}" \
-            -var "region=${{ secrets.REGION }}"
+            -var "project_name=${{ secrets.PROJECT_NAME }}" \
+            -var "region=${{ secrets.REGION }}" \
+            -var "ec2_name=${{ secrets.EC2_NAME }}" \
+            -var "env=${{ secrets.ENV }}"
 
       - name: Terraform Apply
         run: |

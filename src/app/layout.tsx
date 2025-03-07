@@ -1,3 +1,5 @@
+import { Footer } from '@/components/common/Footer'
+import { Navbar } from '@/components/common/Navbar'
 import ToastMessage from '@/components/toolkit/ToastMessage'
 import { APP_FONT } from '@/constants/font'
 
@@ -10,9 +12,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={`${APP_FONT.className}`}>
+      <body
+        className={`relative flex flex-col overflow-scroll ${APP_FONT.className}`}
+      >
         <ToastMessage />
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )

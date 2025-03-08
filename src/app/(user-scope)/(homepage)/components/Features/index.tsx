@@ -1,7 +1,9 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
+
 import { FEATURES_DATA } from './data'
+import { FeatureCard } from './FeatureCard'
 
 export const Features: React.FC = () => {
   const cardsRef = useRef<HTMLDivElement>(null)
@@ -37,25 +39,23 @@ export const Features: React.FC = () => {
   }, [])
 
   return (
-    <div id="cards" ref={cardsRef}>
-      {FEATURES_DATA.map((feature, index: number) => (
-        <div className="card" key={`${feature.title}-${index}`}>
-          <div className="card-content">
-            <div className="card-image">
-              <i className="fa-duotone fa-apartment"></i>
-            </div>
-            <div className="card-info-wrapper">
-              <div className="card-info">
-                <i className="fa-duotone fa-apartment"></i>
-                <div className="card-info-title">
-                  <h3>{feature.title}</h3>
-                  <h4>{feature.description}</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
+    <section
+      className="flex w-full flex-col items-center border-y border-neutral-200 bg-neutral-100 to-white px-4 py-12 lg:py-20"
+      data-cid="features-homepage"
+    >
+      <div
+        className="justifify-center mx-auto flex w-full max-w-2xl flex-wrap gap-4 lg:max-w-5xl"
+        id="cards"
+        ref={cardsRef}
+      >
+        {FEATURES_DATA.map((feature, index: number) => (
+          <FeatureCard
+            copy={feature}
+            index={index}
+            key={`${feature.title}-${index}`}
+          />
+        ))}
+      </div>
+    </section>
   )
 }

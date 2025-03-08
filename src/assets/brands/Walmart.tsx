@@ -1,4 +1,4 @@
-import { IconProps } from '@/types/copy/icons'
+import { IconProps } from '@/types/components/icons'
 
 export const Walmart: React.FC<IconProps> = props => {
   return (

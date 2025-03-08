@@ -11,17 +11,5 @@ export const FEATURES_DATA = [
   {
     title: 'Sustentabilidade',
     description: 'Os painéis solares são uma fonte de energia limpa.'
-  },
-  {
-    title: 'Baixa Manutenção',
-    description: 'Os painéis solares exigem pouca manutenção.'
-  },
-  {
-    title: 'Tecnologia Inovadora',
-    description: 'Diversos recursos tecnológicos e acessíveis.'
-  },
-  {
-    title: 'Valorização do Imóvel',
-    description: 'Utilize tecnologias sustentáveis e economize energia.'
   }
 ] as const

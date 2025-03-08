@@ -12,9 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body
-        className={`relative flex flex-col overflow-scroll ${APP_FONT.className}`}
-      >
+      <body className={`${APP_FONT.className}`}>
         <ToastMessage />
         <Navbar />
         {children}

@@ -9,7 +9,7 @@ export const ClientsCarousel: React.FC<ClientsCarouselProps> = ({
   className,
   backgroundColor = '#fafafa'
 }) => {
-  const generateLoop = (slidesData: JSX.Element[], maxLength: number) => {
+  const generateLoop = (slidesData: React.JSX.Element[], maxLength: number) => {
     if (slidesData.length > 0) {
       const repeatCount = Math.ceil(maxLength / slidesData.length)
       return Array.from(

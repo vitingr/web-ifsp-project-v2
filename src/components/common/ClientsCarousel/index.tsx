@@ -46,14 +46,16 @@ export const ClientsCarousel: React.FC<ClientsCarouselProps> = ({
           <div className="slide-track md:gap-x-8">
             {Array.from({ length: 5 }).map((_, index) => (
               <Fragment key={`logos-${index}`}>
-                {infiniteLogos.map((slideItem: JSX.Element, index: number) => (
-                  <figure
-                    className="slide -mt-12 flex h-[70px] min-w-[130px] items-center justify-center"
-                    key={`icon-${index}`}
-                  >
-                    {slideItem}
-                  </figure>
-                ))}
+                {infiniteLogos.map(
+                  (slideItem: React.JSX.Element, index: number) => (
+                    <figure
+                      className="slide -mt-12 flex h-[70px] min-w-[130px] items-center justify-center"
+                      key={`icon-${index}`}
+                    >
+                      {slideItem}
+                    </figure>
+                  )
+                )}
               </Fragment>
             ))}
           </div>

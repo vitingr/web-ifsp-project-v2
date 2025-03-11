@@ -41,7 +41,7 @@ resource "aws_security_group" "securitygroup" {
 resource "aws_instance" "server" {
   ami           = "ami-05b10e08d247fb927"
   instance_type = "t2.micro"
-  key_name      = "app-ssh-key"
+  key_name      = "ssh-key"
 
   vpc_security_group_ids = [aws_security_group.securitygroup.id]
 

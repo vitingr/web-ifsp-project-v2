@@ -19,4 +19,4 @@ export const HOW_IT_WORKS_SECTIONS = [
       alt: 'Sustentable Solar Panel'
     }
   }
-]
+] as const

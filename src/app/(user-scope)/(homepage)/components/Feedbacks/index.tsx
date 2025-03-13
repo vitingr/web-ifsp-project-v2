@@ -59,7 +59,7 @@ export const Feedbacks: React.FC = () => {
         >
           {FEDBACKS_DATA.map((partner, index: number) => (
             <SwiperSlide key={`${partner.logo}-${index}`}>
-              <div className="group flex min-h-[300px] w-full cursor-pointer cursor-pointer flex-col items-center gap-6 rounded-2xl border border-neutral-200 bg-white px-6 py-8  transition-all duration-300 hover:scale-[1.02] lg:gap-12">
+              <div className="group flex min-h-[300px] w-full cursor-grab flex-col items-center gap-6 rounded-2xl border border-neutral-200 bg-white px-6 py-8  transition-all duration-300 lg:gap-12 lg:hover:scale-[1.02]">
                 <div className="flex w-full items-start gap-3">
                   <figure className="flex w-full items-start justify-start">
                     {CLIENTS_LOGOS[partner.logo]}

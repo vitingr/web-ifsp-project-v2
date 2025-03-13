@@ -1,5 +1,7 @@
 import { HalfImageBanner } from '@/components/common/HalfImageBanner'
 
+import { ModalForm } from './ModalForm'
+
 export const FormSection: React.FC = async () => {
   return (
     <HalfImageBanner
@@ -9,10 +11,10 @@ export const FormSection: React.FC = async () => {
         height: 4000,
         width: 6000
       }}
-      className="items-center bg-white"
+      className="items-center bg-neutral-50"
       imageClassName="2xl:max-h-[615px] object-bottom"
     >
-      <section className="flex flex-col gap-4 lg:gap-8">
+      <section className="flex flex-col gap-4 px-4 py-12 lg:gap-12 lg:py-0">
         <article className="flex flex-col gap-2">
           <h1 className="text-2xl font-semibold lg:text-4xl">
             Transformando o Mercado de Entregas
@@ -22,7 +24,7 @@ export const FormSection: React.FC = async () => {
             mercados a clientes com rapidez, eficiência e personalização.
           </p>
         </article>
-        <div className="w-full">{/* <FreeDemoForm /> */}</div>
+        <ModalForm />
       </section>
     </HalfImageBanner>
   )

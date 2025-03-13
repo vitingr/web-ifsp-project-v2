@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import { ClientsCarousel } from '@/components/common/ClientsCarousel'
 import { getMetaData } from '@/utils/seo/getMetaData'
 
+import { Benefits } from './components/Benefits'
 import { Features } from './components/Features'
 import { Feedbacks } from './components/Feedbacks'
 import { FormSection } from './components/FormSection'
@@ -12,9 +13,10 @@ import { Impacts } from './components/Impacts'
 
 export async function generateMetadata() {
   return getMetaData({
-    description: '',
+    title: 'Energia Solar Sustentável | Economia e Inovação para Você',
+    description:
+      'Descubra como a energia solar pode transformar sua casa ou empresa. Painéis solares modernos, acessíveis e eficientes para um futuro mais sustentável.',
     image: '',
-    title: '',
     url: '/'
   })
 }
@@ -28,6 +30,8 @@ const Page: NextPage = async () => {
       <Features />
       <Impacts />
       <Feedbacks />
+      <Benefits />
+      <ClientsCarousel />
       <FormSection />
     </main>
   )

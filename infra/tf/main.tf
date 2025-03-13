@@ -41,7 +41,7 @@ resource "aws_security_group" "securitygroup" {
     from_port   = 3000
     to_port     = 3000
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # Allow from any IP (use a more restrictive range if needed)
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {

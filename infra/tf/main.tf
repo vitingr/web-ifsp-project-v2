@@ -37,6 +37,13 @@ resource "aws_security_group" "securitygroup" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+    ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   ingress {
     from_port   = 3000
     to_port     = 3000
@@ -63,6 +70,8 @@ resource "aws_instance" "server" {
   ami           = "ami-05b10e08d247fb927"
   instance_type = "t2.micro"
   key_name      = "ssh-key"
+
+  user_data      = file("user_data.sh")
 
   vpc_security_group_ids = [aws_security_group.securitygroup.id]
 

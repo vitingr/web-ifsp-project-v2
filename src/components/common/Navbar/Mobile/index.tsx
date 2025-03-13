@@ -19,7 +19,7 @@ export const MobileNavbar: React.FC = () => {
         <div className="flex gap-6">
           <button
             aria-label="Toggle Drawer"
-            className="duration-default bg-transparent-500 w-10 cursor-pointer rounded-sm p-2.5"
+            className="bg-transparent-500 w-10 cursor-pointer rounded-sm p-2.5 duration-300"
             onClick={handleToggleDrawer}
           >
             <CustomSandwich className="text-neutral-700" />

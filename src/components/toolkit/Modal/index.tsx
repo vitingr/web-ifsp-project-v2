@@ -30,10 +30,10 @@ export const Modal: React.FC<ModalProps> = ({
       >
         <Transition.Child
           as={Fragment}
-          enter="ease-out duration-default"
+          enter="ease-out duration-300"
           enterFrom="opacity-0"
           enterTo="opacity-100"
-          leave="ease-in duration-default"
+          leave="ease-in duration-300"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
@@ -46,10 +46,10 @@ export const Modal: React.FC<ModalProps> = ({
           >
             <Transition.Child
               as={Fragment}
-              enter="ease-out duration-default"
+              enter="ease-out duration-300"
               enterFrom="opacity-0 scale-95"
               enterTo="opacity-100 scale-100"
-              leave="ease-in duration-default"
+              leave="ease-in duration-300"
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
@@ -58,7 +58,7 @@ export const Modal: React.FC<ModalProps> = ({
                   <div className="absolute right-3 top-3">
                     <button
                       aria-label="close-modal"
-                      className="duration-default w-8 rounded-sm p-1 text-slate-600 hover:bg-slate-200 hover:text-slate-500"
+                      className="w-8 rounded-sm p-1 text-slate-600 duration-300 hover:bg-slate-200 hover:text-slate-500"
                       onClick={handleCloseModal}
                     >
                       <HiXMark size={24} />

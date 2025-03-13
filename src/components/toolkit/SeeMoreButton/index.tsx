@@ -8,11 +8,11 @@ const SeeMoreButton: React.FC<SeeMoreButtonProps> = ({
 }) => {
   return (
     <button
-      className={`duration-default mx-auto mt-12 flex items-center justify-center gap-x-2 font-semibold leading-4 text-indigo-700 transition-colors ease-in-out hover:text-indigo-800 lg:hover:cursor-pointer ${className}`}
+      className={`mx-auto mt-12 flex items-center justify-center gap-x-2 font-semibold leading-4 text-indigo-700 transition-colors duration-300 ease-in-out hover:text-indigo-800 lg:hover:cursor-pointer ${className}`}
       onClick={() => onClick()}
     >
       <svg
-        className="duration-default inline transition-colors ease-in-out hover:text-indigo-800"
+        className="inline transition-colors duration-300 ease-in-out hover:text-indigo-800"
         height="20"
         viewBox="0 0 20 20"
         width="20"

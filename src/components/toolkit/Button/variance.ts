@@ -9,7 +9,7 @@ export const buttonVariants = cva(
     'w-full',
     'tracking-wide',
     'transition-all',
-    'duration-default',
+    'duration-300',
     'cursor-pointer',
     'ease-in-out',
     'disabled:cursor-not-allowed',

@@ -55,7 +55,7 @@ export const Drawer: React.FC<DrawerProps> = ({
           <div className="absolute right-3 top-3">
             <button
               aria-label="close-modal"
-              className="duration-default w-10 cursor-pointer rounded-sm p-2 text-slate-500 lg:hover:bg-slate-200 lg:hover:text-slate-500"
+              className="w-10 cursor-pointer rounded-sm p-2 text-slate-500 duration-300 lg:hover:bg-slate-200 lg:hover:text-slate-500"
               onClick={handleCloseDrawer}
             >
               <svg

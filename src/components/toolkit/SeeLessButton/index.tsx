@@ -20,11 +20,11 @@ export const SeeLessButton: React.FC<SeeLessButtonProps> = ({
 
   return (
     <button
-      className={`duration-default mx-auto mt-12 flex items-center justify-center gap-x-2 font-semibold leading-4 text-indigo-700 transition-colors ease-in-out hover:text-indigo-800 lg:hover:cursor-pointer ${className}`}
+      className={`mx-auto mt-12 flex items-center justify-center gap-x-2 font-semibold leading-4 text-indigo-700 transition-colors duration-300 ease-in-out hover:text-indigo-800 lg:hover:cursor-pointer ${className}`}
       onClick={() => (elementId ? handleClickScroll() : onClick())}
     >
       <svg
-        className="duration-default inline transition-colors ease-in-out lg:hover:text-indigo-800"
+        className="inline transition-colors duration-300 ease-in-out lg:hover:text-indigo-800"
         height="21"
         viewBox="0 0 20 21"
         width="20"

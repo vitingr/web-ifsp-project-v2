@@ -1,10 +1,12 @@
+@use "sass:meta";
+
+@use './components/clients-carousel.scss';
+@use './components/features-homepage.scss';
 @use 'swiper/css';
 @use 'swiper/css/pagination';
 @use 'swiper/css/navigation';
 
-@import "tailwindcss";
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
+@use "tailwindcss";
 
 @layer theme, base, components, utilities;
 
@@ -12,8 +14,8 @@
 
 @import "animate.css";
 
-@import './components/clients-carousel.scss';
-@import './components/features-homepage.scss';
+@include meta.load-css("react-code-input.scss");
+@include meta.load-css("react-international-phone.scss");
 
 html {
   scroll-behavior: smooth !important;
@@ -22,4 +24,3 @@ html {
 body {
   @apply font-light box-border text-neutral-700;
 }
-

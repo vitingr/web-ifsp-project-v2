@@ -1,15 +1,17 @@
 export const FEATURES_DATA = [
   {
-    title: 'Eficiência Energética',
+    title: 'Alimentos Frescos e Nutritivos',
     description:
-      'Painéis solares convertem a luz solar em eletricidade de forma eficiente'
+      'Usamos ingredientes frescos e orgânicos para criar pratos que nutrem seu corpo de maneira eficiente.'
   },
   {
-    title: 'Economia de Longo Prazo',
-    description: 'Economia na conta de energia ao longo dos anos.'
+    title: 'Benefícios para a Saúde a Longo Prazo',
+    description:
+      'Comidas balanceadas e nutritivas para uma vida mais saudável e cheia de energia.'
   },
   {
     title: 'Sustentabilidade',
-    description: 'Os painéis solares são uma fonte de energia limpa.'
+    description:
+      'Priorizamos ingredientes orgânicos e embalagens eco-friendly para um impacto mínimo no meio ambiente.'
   }
 ] as const

@@ -5,7 +5,7 @@ import { HOW_IT_WORKS_SECTIONS } from './data'
 
 export const HowItWorks: React.FC = async () => {
   return (
-    <section className="bg-white px-4 py-12 lg:py-20">
+    <section className="bg-white px-4 py-12 lg:py-24">
       <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-8 lg:max-w-7xl lg:gap-16">
         {HOW_IT_WORKS_SECTIONS.map((section, index: number) => (
           <div
@@ -31,7 +31,7 @@ export const HowItWorks: React.FC = async () => {
                   className="text-2xl font-semibold lg:text-3xl"
                   dangerouslySetInnerHTML={{ __html: section.title }}
                 />
-                <hr className="hidden h-1 w-full max-w-[160px] border-amber-700 lg:flex" />
+                <hr className="hidden h-1 w-full max-w-[160px] border-green-600 lg:flex" />
               </span>
               <p className="text-sm text-neutral-600 lg:text-base">
                 {section.description}

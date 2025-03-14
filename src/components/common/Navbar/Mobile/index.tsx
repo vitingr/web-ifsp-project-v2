@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 
+import { Anchor } from '@/components/toolkit/Anchor'
 import { Drawer } from '@/components/toolkit/Drawer'
 
+import { NAVBAR_LINKS } from '../data'
 import { CustomSandwich } from '../icons/CustomSandwich'
 
 export const MobileNavbar: React.FC = () => {
@@ -31,7 +33,18 @@ export const MobileNavbar: React.FC = () => {
           setIsOpen={setIsOpen}
           fullScreenOnMobile
         >
-          <div className="flex flex-col gap-6 px-4 pt-16">teste</div>
+          <div className="flex w-full flex-col gap-6 px-4 pt-16">
+            {NAVBAR_LINKS.map((navbarLink, index) => (
+              <Anchor
+                className="w-full cursor-pointer text-base font-normal transition-all duration-300 hover:text-neutral-900"
+                href={navbarLink.href}
+                key={`${navbarLink.label}-${index}`}
+                variant="custom"
+              >
+                {navbarLink.label}
+              </Anchor>
+            ))}
+          </div>
         </Drawer>
       </div>
     </nav>

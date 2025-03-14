@@ -4,12 +4,12 @@ export const NAVBAR_LINKS = [
     href: '/'
   },
   {
-    label: 'Como funciona',
-    href: '/como-funciona'
+    label: 'Nosso Serviço',
+    href: '/nosso-servico'
   },
   {
-    label: 'Plataforma',
-    href: '/plataforma'
+    label: 'Cardápio',
+    href: '/cardapio'
   },
   {
     label: 'Preços',
@@ -20,8 +20,8 @@ export const NAVBAR_LINKS = [
     href: '/entregas'
   },
   {
-    label: 'Suporte',
-    href: '/suporte'
+    label: 'Sobre Nós',
+    href: '/sobre-nos'
   },
   {
     label: 'Termos de uso',

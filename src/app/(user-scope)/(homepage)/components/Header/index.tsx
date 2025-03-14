@@ -11,7 +11,7 @@ export const Header: React.FC = async () => {
             width: '100%',
             height: '100%'
           }}
-          src="/homepage/solar-panels.mp4"
+          src="/homepage/background-video.mp4"
           autoPlay
           loop
           muted

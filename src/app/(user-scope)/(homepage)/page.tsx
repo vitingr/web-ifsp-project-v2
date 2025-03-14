@@ -10,12 +10,13 @@ import { FormSection } from './components/FormSection'
 import { Header } from './components/Header'
 import { HowItWorks } from './components/HowItWorks'
 import { Impacts } from './components/Impacts'
+import { Questions } from './components/Questions'
 
 export async function generateMetadata() {
   return getMetaData({
-    title: 'Energia Solar Sustentável | Economia e Inovação para Você',
+    title: 'Alimentação Saudável e Sustentável | Sabor e Bem-Estar para Você',
     description:
-      'Descubra como a energia solar pode transformar sua casa ou empresa. Painéis solares modernos, acessíveis e eficientes para um futuro mais sustentável.',
+      'Descubra como uma alimentação saudável pode transformar sua vida. Pratos frescos, nutritivos e sustentáveis para um futuro mais saudável e consciente.',
     image: '',
     url: '/'
   })
@@ -32,6 +33,7 @@ const Page: NextPage = async () => {
       <Feedbacks />
       <Benefits />
       <ClientsCarousel />
+      <Questions />
       <FormSection />
     </main>
   )

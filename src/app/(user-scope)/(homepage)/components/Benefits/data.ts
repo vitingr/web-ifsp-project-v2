@@ -1,22 +1,22 @@
 export const SUSTAINABILITY_SECTIONS = [
   {
     title:
-      'Energia Limpa para um <br class="lg:block hidden" /> Futuro Sustentável',
+      'Comida Saudável para um <br class="lg:block hidden" /> Futuro Sustentável',
     description:
-      'Ao optar pela energia solar, você reduz drasticamente sua pegada de carbono e contribui para um planeta mais saudável. Nossos painéis captam a luz do sol e a transformam em eletricidade limpa, eliminando a dependência de fontes poluentes. Cada quilowatt gerado é um passo a mais na luta contra as mudanças climáticas, promovendo um mundo mais sustentável para as próximas gerações.',
+      'Ao escolher nossa alimentação saudável, você ajuda a reduzir o desperdício de alimentos e a preservar os recursos naturais. Utilizamos ingredientes frescos e orgânicos, cultivados de maneira responsável, para promover uma alimentação consciente e sustentável. Cada refeição é uma escolha positiva para o seu corpo e para o planeta, ajudando a construir um futuro mais saudável para todos.',
     image: {
-      src: 'https://www.enelgreenpower.com/content/dam/enel-egp/immagini/learning-hub/transizione-energetica/rinnovabili_transizione_2400x1160.jpg',
-      alt: 'Solar panel with a green field'
+      src: 'https://media.gettyimages.com/id/1284970912/video/directly-below-dolly-shot-of-green-fruits-and-vegetables-for-a-detox-diet-healthy-eating.jpg?s=640x640&k=20&c=NLIUrfwgmJDNsAhwSqG4hOwfPQNGtYJkrbdGYn_PPZg=',
+      alt: 'Healthy food sustainability'
     }
   },
   {
     title:
-      'Sustentabilidade e Economia <br class="lg:block hidden" /> Caminhando Juntas',
+      'Sustentabilidade e Saúde <br class="lg:block hidden" /> Andando Juntas',
     description:
-      'A energia solar não apenas preserva o meio ambiente, mas também reduz significativamente seus custos com eletricidade. Com um sistema fotovoltaico eficiente, sua casa ou empresa passa a produzir sua própria energia renovável, diminuindo a necessidade de combustíveis fósseis. Além disso, você contribui ativamente para a transição energética global, ajudando a construir um futuro mais limpo e acessível para todos.',
+      'Nossa cozinha prioriza ingredientes locais e orgânicos, reduzindo a pegada de carbono e o uso de produtos industrializados. Além de cuidar da sua saúde, você apoia práticas agrícolas sustentáveis, contribuindo para um mundo mais equilibrado e menos poluído. Junte-se a nós na jornada por uma alimentação mais saudável e sustentável para você e para o planeta.',
     image: {
-      src: 'https://i0.wp.com/wood-create.com/wp-content/uploads/2023/03/solar-panels-shade.jpg?fit=1200%2C700&ssl=1',
-      alt: 'House with solar panels on the roof'
+      src: 'https://www.foodnavigator.com/resizer/v2/6TUQ7EBCXVGMZGZZZ5ANUB3JDU.jpg?auth=6642971b7af11ac333e9558cc22c60309182e95960735cbc9c4077f7b6354698',
+      alt: 'Organic food and sustainability'
     }
   }
 ] as const

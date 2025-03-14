@@ -1,12 +1,14 @@
 'use client'
 
+import Image from 'next/image'
 import { useCallback, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Swiper as SwiperType } from 'swiper/types'
 
 import { Star } from '@/assets/common/Star'
+import strechtedStyles from '@/styles/components/strechted-carousel.module.scss'
 
-import { CLIENTS_LOGOS, FEDBACKS_DATA } from '../data'
+import { FEDBACKS_DATA } from '../data'
 
 export const DesktopSwiper: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null)
@@ -38,18 +40,27 @@ export const DesktopSwiper: React.FC = () => {
             spaceBetween: 25
           }
         }}
-        className="no-scrollbar !ml-auto !mr-0 w-full max-w-[1900px] py-6"
+        className={`${strechtedStyles.strechtedHorizontalSwiper} no-scrollbar !ml-auto !mr-0 w-full max-w-[1900px] py-6`}
         onSwiper={setSwiperRef}
         scrollbar={{ draggable: true, hide: true, el: 'no-scrollbar' }}
         slidesPerView={8}
         spaceBetween={50}
       >
-        {FEDBACKS_DATA.map((partner, index: number) => (
-          <SwiperSlide key={`${partner.logo}-${index}`}>
-            <div className="group flex min-h-[300px] w-full cursor-grab flex-col items-center gap-6 rounded-2xl border border-neutral-200 bg-white px-6 py-8  transition-all duration-300 lg:gap-12 lg:hover:scale-[1.02]">
+        {FEDBACKS_DATA.map((feedback, index: number) => (
+          <SwiperSlide
+            className="rounded-2xl border border-neutral-200 bg-white"
+            key={`feedback-desktop-${index}`}
+          >
+            <div className="group flex h-auto w-full cursor-grab flex-col items-center gap-6 px-6 py-8  transition-all duration-300 lg:gap-12 lg:hover:scale-[1.02]">
               <div className="flex w-full items-start gap-3">
                 <figure className="flex w-full items-start justify-start">
-                  {CLIENTS_LOGOS[partner.logo]}
+                  <Image
+                    alt="Profile Image"
+                    className="h-10 w-10 rounded-full"
+                    height={120}
+                    src="https://api-private.atlassian.com/users/bd764d2ef74af38956dbe34722a8aa67/avatar"
+                    width={120}
+                  />
                 </figure>
                 <div className="flex w-full items-start justify-end gap-1">
                   <Star />
@@ -61,7 +72,7 @@ export const DesktopSwiper: React.FC = () => {
               </div>
               <p
                 className={`flex items-end text-base lg:text-xl ${index === 6 ? '-mt-6' : 'mt-0'}`}
-                dangerouslySetInnerHTML={{ __html: partner.content }}
+                dangerouslySetInnerHTML={{ __html: feedback }}
               />
             </div>
           </SwiperSlide>

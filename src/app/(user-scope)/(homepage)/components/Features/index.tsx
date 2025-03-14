@@ -44,7 +44,7 @@ export const Features: React.FC = () => {
       data-cid="features-homepage"
     >
       <div
-        className="justifify-center mx-auto flex w-full max-w-2xl flex-wrap gap-4 lg:max-w-5xl"
+        className="justifify-center mx-auto flex w-full max-w-2xl flex-nowrap gap-4 lg:max-w-5xl"
         id="cards"
         ref={cardsRef}
       >

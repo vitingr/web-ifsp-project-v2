@@ -7,6 +7,7 @@ import { Drawer } from '@/components/toolkit/Drawer'
 
 import { NAVBAR_LINKS } from '../data'
 import { CustomSandwich } from '../icons/CustomSandwich'
+import { Logo } from '../icons/Logo'
 
 export const MobileNavbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -16,8 +17,18 @@ export const MobileNavbar: React.FC = () => {
   }
 
   return (
-    <nav className="flex items-center justify-end gap-10 bg-[#f5f5f7c2] bg-opacity-10 px-4 py-3">
-      <div className="lg:hidden">
+    <nav className="flex w-full items-center justify-between gap-10 bg-[#f5f5f7c2] bg-opacity-10 px-4 py-3 lg:hidden">
+      <figure className="flex w-full items-center justify-start">
+        <Anchor
+          aria-label="Back to Home"
+          className="w-auto"
+          href="/"
+          variant="custom"
+        >
+          <Logo className="h-10 w-10 cursor-pointer text-neutral-700 transition-all duration-300 hover:brightness-125" />
+        </Anchor>
+      </figure>
+      <div className="flex w-full items-center justify-end">
         <div className="flex gap-6">
           <button
             aria-label="Toggle Drawer"

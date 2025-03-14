@@ -1,62 +1,12 @@
-import { ColoredAmazonLogo } from '../icons/Amazon'
-import { ColoredIbmLogo } from '../icons/Ibm'
-import { ColoredMicrosoftLogo } from '../icons/Microsoft'
-import { ColoredNvidiaLogo } from '../icons/Nvidia'
-import { ColoredOracleLogo } from '../icons/Oracle'
-import { ColoredTeslaLogo } from '../icons/Tesla'
-import { ColoredToyotaLogo } from '../icons/Toyota'
-
 export const FEDBACKS_DATA = [
-  {
-    logo: 'amazon',
-    content:
-      'A instalação dos painéis solares revolucionou nossa eficiência energética. A economia foi imediata e nossa pegada de carbono reduziu significativamente.',
-    href: '#'
-  },
-  {
-    logo: 'microsoft',
-    content:
-      'Nosso compromisso com a sustentabilidade foi elevado com a energia solar. Reduzimos custos operacionais e avançamos em nossa meta de neutralidade de carbono.',
-    href: '#'
-  },
-  {
-    logo: 'nvidia',
-    content:
-      'Os painéis solares forneceram energia limpa e confiável para nossas operações, garantindo mais autonomia e menos dependência da rede elétrica tradicional.',
-    href: '#'
-  },
-  {
-    logo: 'oracle',
-    content:
-      'Uma escolha inteligente! Nossos painéis solares garantem economia a longo prazo e reforçam nosso compromisso com um futuro mais sustentável.',
-    href: '#'
-  },
-  {
-    logo: 'tesla',
-    content:
-      'A inovação está no nosso DNA. Com energia solar, conseguimos alinhar tecnologia de ponta à sustentabilidade, economizando e reduzindo emissões.',
-    href: '#'
-  },
-  {
-    logo: 'ibm',
-    content:
-      'Optamos pela energia solar para otimizar nossos centros de dados e ficamos impressionados com a redução no consumo de energia convencional.',
-    href: '#'
-  },
-  {
-    logo: 'toyota',
-    content:
-      'Sustentabilidade e eficiência são fundamentais para nós. Os painéis solares ajudaram a reduzir nossa dependência da rede elétrica e impulsionar nossas operações.',
-    href: '#'
-  }
-]
-
-export const CLIENTS_LOGOS = {
-  amazon: <ColoredAmazonLogo />,
-  ibm: <ColoredIbmLogo />,
-  nvidia: <ColoredNvidiaLogo />,
-  oracle: <ColoredOracleLogo />,
-  tesla: <ColoredTeslaLogo />,
-  microsoft: <ColoredMicrosoftLogo />,
-  toyota: <ColoredToyotaLogo />
-}
+  'O restaurante oferece uma experiência única, com pratos saudáveis e deliciosos. Eu me surpreendi com a qualidade dos ingredientes e o sabor de cada prato. Sem dúvida, é o lugar perfeito para quem busca uma alimentação equilibrada sem abrir mão do sabor.',
+  'Adorei o ambiente acolhedor e moderno do restaurante. Além disso, a comida é incrível, com uma mistura de sabores frescos e saudáveis. Senti que cada prato foi preparado com muito cuidado e atenção aos detalhes. Definitivamente um lugar que recomendo.',
+  'Fui com a minha família e todos amaram! As opções do cardápio são variadas e agradam todos os paladares. A comida é fresquinha, leve e muito saborosa. É bom saber que a gente pode comer bem e de forma saudável sem perder o sabor.',
+  'Eu estava procurando um restaurante que oferecesse uma alimentação saudável e ao mesmo tempo saborosa, e encontrei exatamente isso aqui. O atendimento foi impecável e os pratos estavam maravilhosos. Recomendo a todos que buscam um estilo de vida mais saudável.',
+  'Simplesmente maravilhoso! O conceito de comida saudável aqui é levado a sério. Cada prato que experimentei estava saboroso, bem equilibrado e feito com ingredientes frescos. O atendimento também foi excelente, todos foram super atenciosos. Com certeza vou voltar mais vezes.',
+  'Experiência incrível! A comida é de excelente qualidade e, o melhor, é saborosa e muito bem apresentada. A combinação de ingredientes frescos e saudáveis me fez sentir bem e satisfeita. O ambiente é tranquilo e perfeito para uma refeição relaxante. Recomendo muito!',
+  'Finalmente encontrei um lugar que serve comida saudável e saborosa! Os pratos são deliciosos, e o menu é cheio de opções para todos os gostos. Além disso, o ambiente é ótimo para um almoço descontraído. Adorei e com certeza vou voltar.',
+  'Estava em busca de uma alimentação saudável, mas sem perder o prazer de comer bem, e encontrei tudo isso aqui. Os pratos são leves, mas cheios de sabor. O atendimento é muito bom e o ambiente super acolhedor. Uma experiência que vale muito a pena.',
+  'Recomendo de olhos fechados! O restaurante tem uma proposta de comida saudável e saborosa, com opções para todos os gostos. O ambiente é tranquilo e agradável, perfeito para um almoço ou jantar. Fui bem atendido e, sem dúvida, voltarei mais vezes.',
+  'Uma verdadeira experiência gastronômica! Pratos deliciosos e saudáveis, com um toque especial em cada receita. O restaurante oferece uma ótima variedade de opções no cardápio e o ambiente é perfeito para quem quer relaxar e comer bem. Com certeza voltarei mais vezes.'
+] as const

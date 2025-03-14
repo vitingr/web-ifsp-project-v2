@@ -12,16 +12,12 @@ export const NAVBAR_LINKS = [
     href: '/cardapio'
   },
   {
-    label: 'Preços',
-    href: '/precos'
+    label: 'Reservas',
+    href: '/reservas'
   },
   {
     label: 'Entregas',
     href: '/entregas'
-  },
-  {
-    label: 'Sobre Nós',
-    href: '/sobre-nos'
   },
   {
     label: 'Termos de uso',

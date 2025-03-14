@@ -1,7 +1,9 @@
+import Image from 'next/image'
+
 import { Star } from '@/assets/common/Star'
 import { CustomSwiper } from '@/components/toolkit/CustomSwiper'
 
-import { CLIENTS_LOGOS, FEDBACKS_DATA } from '../data'
+import { FEDBACKS_DATA } from '../data'
 import { mobileSliderOptions } from './data'
 
 export const MobileSwiper: React.FC = () => {
@@ -12,7 +14,13 @@ export const MobileSwiper: React.FC = () => {
     >
       <div className="flex w-full items-start gap-3">
         <figure className="flex w-full items-start justify-start">
-          {CLIENTS_LOGOS[feedback.logo]}
+          <Image
+            alt="Profile Image"
+            className="h-8 w-8 rounded-full"
+            height={120}
+            src="https://api-private.atlassian.com/users/bd764d2ef74af38956dbe34722a8aa67/avatar"
+            width={120}
+          />
         </figure>
         <div className="flex w-full items-start justify-end gap-1">
           <Star />
@@ -24,7 +32,7 @@ export const MobileSwiper: React.FC = () => {
       </div>
       <p
         className={`flex items-end text-base lg:text-xl ${index === 6 ? '-mt-6' : 'mt-0'}`}
-        dangerouslySetInnerHTML={{ __html: feedback.content }}
+        dangerouslySetInnerHTML={{ __html: feedback }}
       />
     </div>
   ))

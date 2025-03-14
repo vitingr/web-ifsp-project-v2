@@ -13,6 +13,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
+      <head>
+        <meta content="#da532c" name="msapplication-TileColor" />
+        <meta
+          content="/favicon/browserconfig.xml"
+          name="msapplication-config"
+        />
+        <meta content="#ffffff" name="theme-color"></meta>
+      </head>
       <body className={`${APP_FONT.className}`}>
         <PostHogProvider>
           <ToastMessage />

@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 
+import { CircleButton } from '@/components/common/CircleButton'
+
 import { HOW_IT_WORKS_SECTIONS } from './data'
 
 export const HowItWorks: React.FC = async () => {
@@ -36,6 +38,9 @@ export const HowItWorks: React.FC = async () => {
               <p className="text-sm text-neutral-600 lg:text-base">
                 {section.description}
               </p>
+              <div className="mt-4 flex w-full items-start justify-start">
+                <CircleButton href="#" label="Quero saber mais" />
+              </div>
             </article>
           </div>
         ))}

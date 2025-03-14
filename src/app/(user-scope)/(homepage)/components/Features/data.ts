@@ -5,7 +5,7 @@ export const FEATURES_DATA = [
       'Usamos ingredientes frescos e orgânicos para criar pratos que nutrem seu corpo de maneira eficiente.'
   },
   {
-    title: 'Benefícios para a Saúde a Longo Prazo',
+    title: 'Benefícios para a Saúde',
     description:
       'Comidas balanceadas e nutritivas para uma vida mais saudável e cheia de energia.'
   },

@@ -1,5 +1,6 @@
 variable "aws_bucket_name" {}
 variable "aws_bucket_key" {}
+
 variable "project_name" {}
 variable "region" {}
 variable "env" {}

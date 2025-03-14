@@ -10,14 +10,14 @@
 
 
   :global(.swiper-pagination-bullet-active) {
-    background: #2563eb !important;
+    background: oklch(0.527 0.154 150.069) !important;
     width: 48px !important;
   }
 
 
   :global(.swiper-pagination-bullet) {
     height: 2.6px;
-    background: #2563eb !important;
+    background: oklch(0.527 0.154 150.069) !important;
     width: 24px;
     border-radius: 0;
   }

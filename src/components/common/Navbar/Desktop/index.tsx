@@ -2,12 +2,21 @@ import { Anchor } from '@/components/toolkit/Anchor'
 
 import { NAVBAR_LINKS } from '../data'
 import { Account } from '../icons/Account'
+import { Logo } from '../icons/Logo'
 import { Shop } from '../icons/Shop'
 
 export const DesktopNavbar: React.FC = () => {
   return (
     <nav className="fixed inset-0 z-[99999] hidden max-h-[44px] w-full bg-[#f5f5f7c2] bg-opacity-10 bg-clip-padding px-6 py-4 backdrop-blur-sm backdrop-filter lg:flex lg:px-4 xl:px-0">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-center gap-4 lg:gap-8">
+        <Anchor
+          aria-label="Back to Home"
+          className="w-auto"
+          href="/"
+          variant="custom"
+        >
+          <Logo className="h-8 w-8 cursor-pointer text-neutral-700 transition-all duration-300 hover:brightness-125" />
+        </Anchor>
         {NAVBAR_LINKS.map((navbarLink, index) => (
           <Anchor
             className="cursor-pointer text-xs font-normal transition-all duration-300 hover:text-neutral-900"

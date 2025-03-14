@@ -47,7 +47,7 @@
   .card::before {
     background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
         #bd77ff10,
-        #d1ae6d1a,
+        #91dd9b1a,
         transparent 40%);
     z-index: 3;
   }
@@ -55,7 +55,7 @@
   .card::after {
     background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
         #bd77ff10,
-        #d1ae6d1a,
+        #91dd9b1a,
         transparent 40%);
     z-index: 1;
   }
@@ -89,7 +89,7 @@
     display: flex;
     flex-grow: 1;
     justify-content: flex-start;
-    padding: 0px 20px;
+    padding: 0px 0px 8px 0px;
   }
 
   .card-info {

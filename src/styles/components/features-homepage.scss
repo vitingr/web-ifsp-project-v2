@@ -21,7 +21,6 @@
     border-radius: 10px;
     border: 1px solid #c7c7c7;
     cursor: pointer;
-    height: 260px;
     flex-direction: column;
     position: relative;
     width: 100%;
@@ -75,7 +74,7 @@
     align-items: center;
     display: flex;
     height: 140px;
-    justify-content: center;
+    padding-left: 8px;
     overflow: hidden;
   }
 
@@ -95,7 +94,6 @@
   .card-info {
     align-items: flex-start;
     display: flex;
-    gap: 10px;
   }
 
   .card-info>i {

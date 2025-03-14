@@ -50,6 +50,7 @@ export const MobileNavbar: React.FC = () => {
                 className="w-full cursor-pointer text-base font-normal transition-all duration-300 hover:text-neutral-900"
                 href={navbarLink.href}
                 key={`${navbarLink.label}-${index}`}
+                onClick={handleToggleDrawer}
                 variant="custom"
               >
                 {navbarLink.label}

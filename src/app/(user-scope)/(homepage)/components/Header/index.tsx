@@ -21,7 +21,7 @@ export const Header: React.FC = async () => {
         />
         <Image
           alt="Restaurant Image"
-          className="flex w-full object-cover md:hidden"
+          className="flex h-full w-full object-cover md:hidden"
           height={1238}
           src="https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?cs=srgb&dl=pexels-pixabay-260922.jpg&fm=jpg"
           width={2200}

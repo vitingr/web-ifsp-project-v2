@@ -1,8 +1,6 @@
 import { NextPage } from 'next'
 
 import { ClientsCarousel } from '@/components/common/ClientsCarousel'
-import { Footer } from '@/components/common/Footer'
-import { Navbar } from '@/components/common/Navbar'
 import { getMetaData } from '@/utils/seo/getMetaData'
 
 import { FormSection } from '../(homepage)/components/FormSection'
@@ -12,9 +10,9 @@ import { Options } from './components/Options'
 
 export async function generateMetadata() {
   return getMetaData({
-    title: 'Termos de Uso - Regras e Condições',
+    title: 'Alimentação Saudável e Sustentável | Sabor e Bem-Estar para Você',
     description:
-      'Leia os Termos de Uso e entenda as condições e responsabilidades para utilizar nossos serviços de forma segura e transparente.',
+      'Descubra como uma alimentação saudável pode transformar sua vida. Pratos frescos, nutritivos e sustentáveis para um futuro mais saudável e consciente.',
     image: '',
     url: '/reservas'
   })
@@ -22,17 +20,13 @@ export async function generateMetadata() {
 
 const Page: NextPage = async () => {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Header />
-        <Options />
-        <ClientsCarousel />
-        <About />
-        <FormSection />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <Header />
+      <Options />
+      <ClientsCarousel />
+      <About />
+      <FormSection />
+    </main>
   )
 }
 

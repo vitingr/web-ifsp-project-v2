@@ -24,7 +24,7 @@ export const Options: React.FC = () => {
         <ul className="mx-auto flex h-full w-full flex-col gap-6 lg:max-w-6xl lg:flex-row lg:items-stretch lg:justify-between lg:gap-12 lg:self-stretch">
           <li className="flex w-full flex-col gap-4 rounded-sm bg-white lg:gap-6">
             <hr
-              className={`h-4 w-full rounded-t-sm border-none bg-gradient-to-r from-green-700 to-green-500`}
+              className={`h-0.5 w-full rounded-t-sm border-none bg-gradient-to-r from-green-700 to-green-500 lg:h-4`}
             />
             <article className="flex flex-col items-center gap-2 px-4">
               <span className="w-fit rounded-full bg-green-50 px-2 py-1 text-center text-xs font-medium uppercase text-green-600">
@@ -48,7 +48,7 @@ export const Options: React.FC = () => {
           </li>
           <li className="flex w-full flex-col gap-4 rounded-sm bg-white lg:gap-6">
             <hr
-              className={`h-4 w-full rounded-t-sm border-none bg-gradient-to-r from-amber-600 to-amber-400`}
+              className={`h-0.5 w-full rounded-t-sm border-none bg-gradient-to-r from-amber-600 to-amber-400 lg:h-4`}
             />
             <article className="flex flex-col items-center gap-2 px-4">
               <span className="w-fit rounded-full bg-amber-50 px-2 py-1 text-center text-xs font-medium uppercase text-yellow-700">

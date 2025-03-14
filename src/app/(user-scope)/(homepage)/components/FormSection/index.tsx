@@ -12,7 +12,7 @@ export const FormSection: React.FC = async () => {
         width: 6000
       }}
       className="items-center bg-neutral-50"
-      imageClassName="2xl:max-h-[615px] object-bottom"
+      imageClassName="2xl:max-h-[615px] lg:min-h-[400px] 2xl:min-h-[300px] object-bottom"
     >
       <section className="flex flex-col gap-4 px-4 py-12 lg:gap-12 lg:py-0">
         <article className="flex flex-col gap-2">

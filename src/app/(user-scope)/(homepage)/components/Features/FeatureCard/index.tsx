@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
+import { CARD_ICONS } from './data'
 import { FeatureCardProps } from './types'
 
 export const FeatureCard: React.FC<FeatureCardProps> = ({ copy, index }) => {
@@ -26,7 +27,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({ copy, index }) => {
     <>
       <motion.div
         animate={inView ? 'visible' : 'hidden'}
-        className="card hidden lg:flex"
+        className="card hidden h-[260px] lg:flex"
         custom={index}
         initial="hidden"
         ref={ref}
@@ -34,11 +35,9 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({ copy, index }) => {
         variants={imageVariants}
       >
         <div className="card-content">
-          <div className="card-image">
-            <i className="fa-duotone fa-apartment"></i>
-          </div>
+          <figure className="card-image">{CARD_ICONS[copy.icon]}</figure>
           <div className="card-info-wrapper">
-            <div className="card-info">
+            <div className="card-info gap-[10px]">
               <i className="fa-duotone fa-apartment"></i>
               <div className="card-info-title">
                 <h3>{copy.title}</h3>
@@ -50,7 +49,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({ copy, index }) => {
       </motion.div>
       <motion.div
         animate={mobileInView ? 'visible' : 'hidden'}
-        className="card flex lg:hidden"
+        className="card flex h-[200px] lg:hidden"
         custom={index}
         initial="hidden"
         ref={mobileRef}
@@ -58,9 +57,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({ copy, index }) => {
         variants={imageVariants}
       >
         <div className="card-content">
-          <div className="card-image">
-            <i className="fa-duotone fa-apartment"></i>
-          </div>
+          <figure className="card-image">{CARD_ICONS[copy.icon]}</figure>
           <div className="card-info-wrapper">
             <div className="card-info">
               <i className="fa-duotone fa-apartment"></i>

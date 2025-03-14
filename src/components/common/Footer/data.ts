@@ -1,21 +1,21 @@
 export const FOOTER_LINKS = [
   {
-    title: 'Sobre a Plataforma',
+    title: 'Sobre Nós',
     links: [
       {
-        label: 'O que fazemos',
+        label: 'Nossa história',
         href: '#'
       },
       {
-        label: 'Como funciona',
+        label: 'Nossa missão',
         href: '#'
       },
       {
-        label: 'Nossos benefícios',
+        label: 'Compromisso com a qualidade',
         href: '#'
       },
       {
-        label: 'Depoimentos',
+        label: 'Depoimentos de clientes',
         href: '#'
       },
       {
@@ -36,7 +36,7 @@ export const FOOTER_LINKS = [
         href: '#'
       },
       {
-        label: 'Suporte técnico',
+        label: 'Reservas de mesas',
         href: '#'
       },
       {
@@ -46,26 +46,26 @@ export const FOOTER_LINKS = [
     ]
   },
   {
-    title: 'Parcerias',
+    title: 'Menu e Ofertas',
     links: [
       {
-        label: 'Seja um parceiro',
+        label: 'Cardápio',
         href: '#'
       },
       {
-        label: 'Mercados parceiros',
+        label: 'Pratos especiais',
         href: '#'
       },
       {
-        label: 'Entregadores parceiros',
+        label: 'Opções vegetarianas e veganas',
         href: '#'
       },
       {
-        label: 'Benefícios para parceiros',
+        label: 'Combos e promoções',
         href: '#'
       },
       {
-        label: 'Histórias de sucesso',
+        label: 'Sugestões do chef',
         href: '#'
       }
     ]
@@ -74,23 +74,23 @@ export const FOOTER_LINKS = [
     title: 'Recursos',
     links: [
       {
-        label: 'Documentação da API',
-        href: 'https://api-documentation-link.com/'
-      },
-      {
-        label: 'Blog de atualizações',
+        label: 'Blog sobre alimentação saudável',
         href: '#'
       },
       {
-        label: 'Tutoriais e guias',
+        label: 'Dicas de nutrição',
         href: '#'
       },
       {
-        label: 'Central de aprendizado',
+        label: 'Receitas exclusivas',
         href: '#'
       },
       {
-        label: 'Comunidade de suporte',
+        label: 'Eventos e workshops',
+        href: '#'
+      },
+      {
+        label: 'Comunidade saudável',
         href: '#'
       }
     ]
@@ -99,23 +99,23 @@ export const FOOTER_LINKS = [
     title: 'Ferramentas',
     links: [
       {
-        label: 'Calculadora de entregas',
+        label: 'Calculadora de calorias',
         href: '#'
       },
       {
-        label: 'Simulador de custos',
+        label: 'Planejador de refeições',
         href: '#'
       },
       {
-        label: 'Painel do parceiro',
+        label: 'Programa de fidelidade',
         href: '#'
       },
       {
-        label: 'Gerenciamento de pedidos',
+        label: 'Agendamento de eventos',
         href: '#'
       },
       {
-        label: 'Rastreamento em tempo real',
+        label: 'Mapa de localização',
         href: '#'
       }
     ]

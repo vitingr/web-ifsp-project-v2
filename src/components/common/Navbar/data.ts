@@ -9,15 +9,11 @@ export const NAVBAR_LINKS = [
   },
   {
     label: 'Cardápio',
-    href: '/cardapio'
+    href: '/'
   },
   {
     label: 'Reservas',
     href: '/reservas'
-  },
-  {
-    label: 'Entregas',
-    href: '/entregas'
   },
   {
     label: 'Termos de uso',
